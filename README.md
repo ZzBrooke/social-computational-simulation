@@ -131,9 +131,9 @@ Similarity increased rapidly during the early rounds and remained around 0.70 in
 The aggregate preferences at round 30 continued to show the same general ranking as in Experiment 1. For M1, *laap* and *siu* remained the most strongly represented forms, while *zung* and *faai* had lower aggregate preferences. For M2, *zung* and *faai* remained the two strongest forms.
 
 ### Interpretation
-Adding social interaction changed the pattern observed in Experiment 1. Preference strength increased only slightly compared with the individual-learning baseline, while learner similarity increased much more clearly, from 0.53 to 0.6967 for M1 and from 0.59 to 0.6967 for M2.
+Adding social interaction changed the pattern observed in Experiment 1. Preference strength increased only slightly compared with the individual-learning baseline, while learner similarity increased much more clearly, from **0.53 to 0.6967** for M1 and from **0.59 to 0.6967** for M2.
 
-This suggests that mutual exposure to other learners' preferences affected how preferences were distributed across learners more than how strong individual preferences became. Learners became more similar without developing much stronger individual preferences.
+This suggests that mutual exposure to other learners' preferences affected how preferences were distributed across learners more than how strong individual preferences became. Learners became more similar without a comparable increase in individual preference strength.
 
 However, similarity remained below complete consensus and continued to fluctuate across runs. Social interaction therefore increased population-level alignment in the model, but did not produce full convergence.
 
@@ -175,10 +175,10 @@ At Generation 20, learner similarity was **0.6033 (SD = 0.2236)** for M1 and **0
 Compared with Experiment 2, learner similarity at the end of Experiment 3 was lower. Experiment 2 reached **0.6967 for both meanings** at round 30, whereas Experiment 3 ended at **0.6033 for M1** and **0.6233 for M2** at Generation 20.
 
 ### Interpretation
-The results show that generational transmission did not lead to a cumulative increase in preference strength or learner similarity. Instead, both measures fluctuated within a similar range across generations.
+The results show that generational transmission did not lead to a **sustained increase** in preference strength or learner similarity. Instead, both measures fluctuated within a similar range across generations.
 
 This pattern is consistent with the structure of the model. Each new generation starts with fresh learners whose association weights are reset, while the previous generation's aggregate preferences are used as the basis for the next generation's input. The random perturbation applied during transmission can therefore carry population-level patterns forward while also introducing variation between generations.
 
-Compared with Experiment 2, similarity at the end of Experiment 3 was lower than the approximately 0.70 observed after 30 rounds of social interaction. This suggests that the alignment produced within a generation was not simply accumulated across generations in the presence of transmission variation.
+Compared with Experiment 2, similarity at the end of Experiment 3 was lower than the approximately **0.70** observed after 30 rounds of social interaction. This suggests that the alignment produced within a generation was not simply accumulated across generations in the presence of transmission variation.
 
-Overall, the three experiments show a progression from stronger individual preferences, to greater alignment through social interaction, to continued variation when these population-level patterns are transmitted across generations.
+Overall, the three experiments show a progression from **stronger individual preferences**, to **greater alignment through social interaction**, to **continued variation** when these population-level patterns are transmitted across generations.
