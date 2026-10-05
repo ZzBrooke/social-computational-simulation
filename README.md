@@ -138,3 +138,49 @@ This comparison suggests that mutual exposure to other learners' preferences was
 However, similarity remained below complete consensus and continued to fluctuate across runs. The model therefore did not produce full convergence through social interaction alone.
 
 This provides the basis for Experiment 3, which examines how population-level patterns change when they are used as input for a new generation.
+
+## Experiment 3: Generational Transmission
+### Question
+The third experiment asks:
+**How do population-level form–meaning preferences change when the patterns of one generation become the input for the next generation?**
+
+This experiment extends Experiment 2 by introducing generational transmission. Instead of keeping the original input distributions throughout the simulation, the aggregate preferences of one generation are used to construct the input distribution for the next generation.
+
+### Method
+The simulation used 10 learners across 20 generations, with 10 learning rounds within each generation. Each generation followed the setup of Experiment 2, including individual learning and social interaction.
+
+At the end of each generation, the aggregate preferences of the population were used to construct the input distribution for the next generation. Each preference was then multiplied by a random value between 0.3 and 1.7 and normalized before being used as input for the new generation. This introduced variation into the transmission process.
+
+Individual association weights were not directly passed from one generation to the next. Instead, each new generation started with new learners whose weights were initialized at 1.0, while population-level preference patterns were carried forward through the input distribution.
+
+Preference strength and learner similarity were recorded across 20 generations for 30 simulation runs.
+
+### Results
+Preference strength did not show a sustained increase across generations. It started at **0.3616 for M1** and **0.3677 for M2** in Generation 1, decreased during the early generations, and then remained within a relatively narrow range.
+| Meaning | Generation 1 | Generation 20 |
+| ------- | -----------: | ------------: |
+| M1      |       0.3616 |        0.3425 |
+| M2      |       0.3677 |        0.3464 |
+
+At Generation 20, the mean preference strength was **0.3425 (SD = 0.0248)** for M1 and **0.3464 (SD = 0.0213)** for M2.
+
+The lower preference strength compared with Experiments 1 and 2 is also consistent with the shorter learning period within each generation. Each generation contains only 10 learning rounds, and learners' association weights are reset when a new generation is created. This prevents preference strength from simply accumulating across generations.
+
+Learner similarity also fluctuated across generations rather than showing a steady increase.
+| Meaning | Generation 1 | Generation 20 |
+| ------- | -----------: | ------------: |
+| M1      |       0.6333 |        0.6033 |
+| M2      |       0.6600 |        0.6233 |
+
+At Generation 20, learner similarity was **0.6033 (SD = 0.2236)** for M1 and **0.6233 (SD = 0.2063)** for M2. Across the 20 generations, M1 similarity varied roughly between **0.57 and 0.64**, while M2 varied between **0.56 and 0.68**.
+
+Compared with Experiment 2, learner similarity at the end of Experiment 3 was lower. Experiment 2 reached **0.6967 for both meanings** at round 30, whereas Experiment 3 ended at **0.6033 for M1** and **0.6233 for M2** at Generation 20.
+
+### Interpretation
+The results show that population-level preference patterns can be carried from one generation to the next without directly transmitting individual association weights. However, generational transmission did not produce a steady increase in preference strength or learner similarity.
+
+Instead, both measures remained within a fluctuating range across generations. This pattern is consistent with the structure of the model: each new generation starts with fresh learners, while the previous generation's aggregate preferences provide the basis for the next generation's input. The random perturbation applied during transmission can therefore change the input distribution from one generation to the next.
+
+The comparison with Experiment 2 also suggests that generational transmission did not simply strengthen the alignment produced by social interaction. While social interaction within a generation produced similarity of around 0.70 in Experiment 2, similarity in Experiment 3 remained lower and continued to vary across generations.
+
+Overall, the experiment suggests that generational transmission can carry population-level preference patterns forward while still allowing variation between generations. In this simplified model, transmission and social interaction together did not lead to complete convergence on a single form for either meaning.
