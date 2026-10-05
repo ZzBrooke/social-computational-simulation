@@ -48,7 +48,6 @@ The new input distribution is then randomly perturbed and normalized, so the nex
 
 ### Measures
 The simulation tracks three main measures:
-
 * **Preference strength:** the highest association weight for a meaning divided by the total association weight for that meaning.
 * **Aggregate preference:** the distribution obtained by summing learners' association weights and normalizing them separately for each meaning.
 * **Learner similarity:** the proportion of learners whose preferred form matches the population's dominant form for a given meaning.
@@ -56,3 +55,45 @@ The simulation tracks three main measures:
 ### Simulation Settings
 Each experiment is run 30 times. Experiments 1 and 2 run for 30 rounds per run. Experiment 3 runs for 20 generations, with 10 learning rounds in each generation. The individual learning rate is 0.1 throughout the experiments, while Experiments 2 and 3 use a social learning rate of 0.1.
 
+## Experiment 1: Individual Learning
+### Question
+The first experiment asks:
+**How do individual form–meaning preferences develop through repeated input when learners do not interact with one another?**
+
+This experiment provides a baseline for examining the effects of social interaction in Experiment 2.
+
+### Method
+Ten learners were simulated for 30 learning rounds. In each round, each learner received 6 input tokens for each meaning, sampled from their own input distribution. The learners started with equal association weights for all forms and increased the weight of an observed form–meaning pair by 0.1.
+
+No social interaction was included in this experiment. The simulation was repeated 30 times to examine variation across runs.
+
+Preference strength was recorded after each round. Final aggregate preferences and learner similarity were also calculated at round 30.
+
+### Results
+Preference strength increased throughout the 30 learning rounds for both meanings.
+| Meaning | Round 1 | Round 30 |
+| ------- | ------: | -------: |
+| M1      |  0.2869 |   0.3811 |
+| M2      |  0.2851 |   0.3872 |
+
+At round 30, the mean preference strength was **0.3811 (SD = 0.0191)** for M1 and **0.3872 (SD = 0.0200)** for M2. The gradual increase shows that repeated input led learners to develop stronger form–meaning preferences over time.
+
+The aggregate preferences at round 30 broadly followed the initial input distributions. For M1, *laap* remained the most preferred form, followed by *siu*, while *zung* and *faai* had lower preferences. For M2, *zung* remained the most preferred form, followed by *faai*. The ranking of forms was consistent with the initial input probabilities, although the final normalized preference proportions were not identical to them.
+
+| Meaning | Form |   Mean |
+| ------- | ---- | -----: |
+| M1      | laap | 0.3186 |
+| M1      | siu  | 0.2976 |
+| M1      | zung | 0.2140 |
+| M1      | faai | 0.1698 |
+| M2      | zung | 0.3321 |
+| M2      | faai | 0.2885 |
+| M2      | laap | 0.2069 |
+| M2      | siu  | 0.1724 |
+
+Learner similarity at round 30 was **0.53 (SD = 0.1264)** for M1 and **0.59 (SD = 0.1398)** for M2. With four possible forms, a random baseline would be 0.25. The observed similarity scores were therefore above this baseline, but still well below complete consensus.
+
+### Interpretation
+The results show that repeated individual learning was enough to increase form–meaning preference strength, but it did not produce strong convergence across learners. Different learners retained different preferences, even though they were exposed to similar input patterns.
+
+Overall, individual learning produced increasing preferences and some population-level similarity, but the population did not converge on a single form for either meaning. This establishes a baseline for Experiment 2, which examines whether mutual social exposure is associated with greater population-level consensus.
