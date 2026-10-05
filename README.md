@@ -79,7 +79,6 @@ Preference strength increased throughout the 30 learning rounds for both meaning
 At round 30, the mean preference strength was **0.3811 (SD = 0.0191)** for M1 and **0.3872 (SD = 0.0200)** for M2. The gradual increase shows that repeated input led learners to develop stronger form–meaning preferences over time.
 
 The aggregate preferences at round 30 broadly followed the initial input distributions. For M1, *laap* remained the most preferred form, followed by *siu*, while *zung* and *faai* had lower preferences. For M2, *zung* remained the most preferred form, followed by *faai*. The ranking of forms was consistent with the initial input probabilities, although the final normalized preference proportions were not identical to them.
-
 | Meaning | Form |   Mean |
 | ------- | ---- | -----: |
 | M1      | laap | 0.3186 |
@@ -97,3 +96,45 @@ Learner similarity at round 30 was **0.53 (SD = 0.1264)** for M1 and **0.59 (SD 
 The results show that repeated individual learning was enough to increase form–meaning preference strength, but it did not produce strong convergence across learners. Different learners retained different preferences, even though they were exposed to similar input patterns.
 
 Overall, individual learning produced increasing preferences and some population-level similarity, but the population did not converge on a single form for either meaning. This establishes a baseline for Experiment 2, which examines whether mutual social exposure is associated with greater population-level consensus.
+
+## Experiment 2: Social Interaction
+### Question
+The second experiment asks:
+**How do individual form–meaning preferences change when learners are also exposed to one another's preferences?**
+
+This experiment extends the individual learning baseline by adding social interaction between learners.
+
+### Method
+The same setup of 10 learners, 30 learning rounds, and 30 simulation runs was used as in Experiment 1. In each round, learners first received individual input sampled from their own input distributions.
+
+After individual learning, learners were randomly ordered and paired for social interaction. For each meaning, each learner observed their partner's current preferred form and increased the corresponding association weight by 0.1. The interaction was mutual, so both learners were exposed to each other's preferences.
+
+Preference strength and learner similarity were recorded after each round. Final aggregate preferences were also calculated at round 30.
+
+### Results
+Preference strength increased steadily over the 30 learning rounds for both meanings.
+| Meaning | Round 1 | Round 30 |
+| ------- | ------: | -------: |
+| M1      |  0.2898 |   0.3953 |
+| M2      |  0.2884 |   0.4007 |
+
+At round 30, the mean preference strength was **0.3953 (SD = 0.0254)** for M1 and **0.4007 (SD = 0.0230)** for M2. The overall pattern was similar to Experiment 1, with learners developing stronger preferences through repeated exposure.
+
+Learner similarity showed a larger change. For M1, similarity increased from **0.4567** in round 1 to **0.6967 (SD = 0.1650)** in round 30. For M2, it increased from **0.5133** to **0.6967 (SD = 0.1938)**.
+| Meaning | Round 1 | Round 30 |
+| ------- | ------: | -------: |
+| M1      |  0.4567 |   0.6967 |
+| M2      |  0.5133 |   0.6967 |
+
+Similarity increased rapidly during the early rounds and remained around 0.70 in the later rounds, although it continued to fluctuate rather than increasing monotonically. These fluctuations are consistent with the stochastic nature of the model, including random pairing between learners in each round.
+
+The aggregate preferences at round 30 continued to show the same general ranking as in Experiment 1. For M1, *laap* and *siu* remained the most strongly represented forms, while *zung* and *faai* had lower aggregate preferences. For M2, *zung* and *faai* remained the two strongest forms.
+
+### Interpretation
+Adding social interaction changed the pattern observed in Experiment 1. Preference strength continued to increase at a similar level, but learner similarity showed a larger increase. In Experiment 1, round-30 similarity was **0.53 for M1 and 0.59 for M2**, compared with **0.6967 for both meanings in Experiment 2**.
+
+This comparison suggests that mutual exposure to other learners' preferences was associated with greater population-level similarity. The effect was more visible in learner similarity than in preference strength, suggesting that social interaction affected how preferences were distributed across learners rather than simply making individual preferences stronger.
+
+However, similarity remained below complete consensus and continued to fluctuate across runs. The model therefore did not produce full convergence through social interaction alone.
+
+This provides the basis for Experiment 3, which examines how population-level patterns change when they are used as input for a new generation.
