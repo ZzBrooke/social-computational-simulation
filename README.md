@@ -182,3 +182,22 @@ This pattern is consistent with the structure of the model. Each new generation 
 Compared with Experiment 2, similarity at the end of Experiment 3 was lower than the approximately **0.70** observed after 30 rounds of social interaction. This suggests that the alignment produced within a generation was not simply accumulated across generations in the presence of transmission variation.
 
 Overall, the three experiments show a progression from **stronger individual preferences**, to **greater alignment through social interaction**, to **continued variation** when these population-level patterns are transmitted across generations.
+
+## Discussion & Limitations
+### Discussion
+The three experiments show how individual learning, social interaction, and generational transmission led to different patterns in the simulation. Individual learning strengthened learners' preferences for particular form–meaning pairs, but did not lead to high similarity between learners. When social interaction was added, learner similarity increased more clearly than preference strength. This suggests that interaction mainly helped learners develop more similar preferences, rather than simply making their individual preferences stronger. In the generational experiment, population-level preferences were passed on as input to new learners, but this did not lead to a steady increase in either preference strength or learner similarity across generations.
+
+These results show that individual preferences and similarity between learners are not the same thing. A learner can develop a strong preference for a particular form without other learners developing the same preference. Social interaction can make learners' preferences more similar, even when it does not greatly increase the strength of their individual preferences. The generational experiment also suggests that passing on existing population-level patterns does not automatically make those patterns stronger or more consistent over time.
+
+The three experiments provide a simple way to explore how individual learning and shared patterns in a group may influence each other, without treating them as the same process.
+
+### Limitations
+This project has several limitations:
+1. **Simplified form–meaning system:** The simulation uses four abstract form labels and two meanings rather than real linguistic forms and meanings. It therefore represents a simple learning problem rather than the complexity of natural language.
+2. **Simplified social interaction:** Social interaction is limited to learners observing their partners' current preferred forms. The model does not include communication success, communicative goals, negotiation, or other factors that can affect real language use.
+3. **Simplified generational transmission:** Population-level preferences are used to create input for the next generation, with random perturbation added during transmission. Individual association weights are reset rather than directly passed on, so the model does not represent the full process of language transmission between generations.
+4. **Small population and fixed settings:** The model uses 10 learners, fixed input sizes, fixed learning rates, and a limited number of rounds and generations. Different population sizes or parameter settings could produce different patterns.
+5. **Random variation:** Input distributions, learner pairings, and generational input are affected by random variation. The experiments were repeated across 30 runs, but the project focuses on describing the patterns in the simulations rather than using formal statistical tests to compare conditions.
+
+The simulation is a small-scale computational exploration rather than a complete model of language evolution. Its main purpose is to provide a simple setting for exploring how individual form–meaning learning, social interaction, and shared patterns within a group are related.
+
